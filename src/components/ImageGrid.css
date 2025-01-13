@@ -1,0 +1,14 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 列布局 */
+    gap: 10px; /* 每张图片之间的间距 */
+    padding: 20px;
+  }
+  
+  .image-item img {
+    width: 100%; /* 图片宽度占满父容器 */
+    height: auto; /* 保持图片比例 */
+    border-radius: 8px; /* 圆角效果 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  }
+  
