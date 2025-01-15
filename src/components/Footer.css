@@ -1,0 +1,37 @@
+.footer {
+    background-color: #f8f9fa; /* 背景颜色 */
+    text-align: center; /* 内容居中 */
+    padding: 10px 20px; /* 内边距 */
+    border-top: 1px solid #eaeaea; /* 顶部边框 */
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 16px; /* 调整字体大小 */
+    font-weight: 600; /* 增加字体粗细 */
+    color: #333;
+  }
+  
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    color: #E1306C;
+    text-decoration: none;
+    font-size: 18px; /* 增加字体大小 */
+    font-weight: 600;
+    margin-top: 10px;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-link .icon {
+    margin-right: 8px; /* 图标与用户名之间的间距 */
+  }
+  
+  .footer-link .username {
+    font-size: 16px; /* 用户名字体大小 */
+  }
+  
+  .footer-link:hover {
+    color: #C13584; /* 悬停效果 */
+  }
+  

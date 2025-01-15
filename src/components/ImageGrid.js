@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ImageGrid.css";
 
 const images = [
@@ -14,13 +14,32 @@ const images = [
 ];
 
 export default function ImageGrid() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (src) => {
+    setSelectedImage(src); // 设置选中的图片
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null); // 关闭模态框
+  };
+
   return (
     <div className="image-grid">
       {images.map((src, index) => (
-        <div key={index} className="image-item">
+        <div key={index} className="image-item" onClick={() => handleImageClick(src)}>
           <img src={src} alt={`Grid item ${index + 1}`} />
         </div>
       ))}
+
+      {/* 模态框 */}
+      {selectedImage && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImage} alt="Selected" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
