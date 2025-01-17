@@ -1,15 +1,15 @@
 .footer {
-    background-color: #f8f9fa; /* 背景颜色 */
+    background-color: #1e1e2f; /* 背景颜色 */
     text-align: center; /* 内容居中 */
     padding: 10px 20px; /* 内边距 */
-    border-top: 1px solid #eaeaea; /* 顶部边框 */
+    
   }
   
   .footer p {
     margin: 0;
     font-size: 16px; /* 调整字体大小 */
     font-weight: 600; /* 增加字体粗细 */
-    color: #333;
+    color: #ffff;
   }
   
   .footer-link {

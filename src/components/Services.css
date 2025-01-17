@@ -1,0 +1,79 @@
+/* 整体布局 */
+.services-section {
+    padding: 50px 20px;
+    background-color: #1e1e2f; /* 深色背景 */
+    color: #fff; /* 白色字体 */
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #bbbbbb;
+  }
+  
+  .section-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    color: #e0e0e0;
+  }
+  
+  /* 服务卡片容器 */
+  .services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* 服务卡片 */
+  .service-card {
+    background-color: #2b2b3d;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 服务图标 */
+  .service-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* 服务标题 */
+  .service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  /* 服务列表 */
+  .service-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .service-card ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dddddd;
+  }
+  
+  .service-card ul li::before {
+    content: "•";
+    color: #f39c12;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  

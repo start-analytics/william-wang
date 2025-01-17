@@ -1,18 +1,26 @@
 import React from "react";
 import Header from "./components/Header";
-import ImageGrid from "./components/ImageGrid";
+import Home from "./components/Home";
+import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer"; // 引入 Footer
 import "./App.css";
 
-export default function App() {
+function App() {
   return (
-    <div className="app">
+    <div>
       <Header />
-      <main className="main-content">
-        <ImageGrid />
+      <main>
+       <Home />
+       <Services />
+       <Skills />
+       <Portfolio />
       </main>
       <Footer /> {/* 添加 Footer */}
     </div>
   );
 }
+
+export default App;
 

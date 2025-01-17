@@ -1,24 +1,136 @@
 .header {
-    display: flex;
-    align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e1e2f; /* 深色背景 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* 确保文字清晰可见 */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+.nav-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #e0e0e0;
+}
+
+.nav-links li:hover {
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 活动页面高亮 */
+.nav-links li.active {
+  background: linear-gradient(90deg, #ff6a00, #ff0066);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-bar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #1e1e2f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    background-color: #f8f9fa;
+    flex-direction: column;
   }
-  
-  .avatar-container {
+
+  .nav-bar.open {
     display: flex;
-    align-items: center;
+    animation: slideIn 0.5s ease-out;
   }
-  
-  .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+
+  .nav-links {
+    flex-direction: column;
   }
-  
-  .name {
+
+  .nav-links li {
     font-size: 18px;
-    font-weight: bold;
+    padding: 12px 15px;
+    text-align: center;
   }
-  
+}
+
+/* 动画 */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

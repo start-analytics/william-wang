@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .app {
@@ -12,4 +11,24 @@ body {
 .main-content {
   flex: 1;
   background-color: #ffffff;
+}
+
+.section {
+  padding: 80px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
