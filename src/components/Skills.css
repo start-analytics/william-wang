@@ -1,0 +1,95 @@
+/* 整体布局 */
+.skills-section {
+    padding: 50px 20px;
+    background-color: #1e1e2f; /* 深色背景 */
+    color: #fff; /* 白色字体 */
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #bbbbbb;
+  }
+  
+  .section-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    color: #e0e0e0;
+  }
+  
+  /* 技能容器 */
+  .skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .skill-item {
+    margin-bottom: 20px;
+  }
+  
+  .skill-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* 进度条容器 */
+  .progress-bar {
+    position: relative;
+    overflow: visible; /* 确保子元素不会被隐藏 */
+    height: 10px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #007bff; /* 蓝色进度条 */
+    border-radius: 5px 0 0 5px; /* 圆角 */
+    transition: width 0.5s ease; /* 平滑动画 */
+  }
+  
+  .progress-percent {
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    font-size: 12px;
+    color: #fff; /* 浅灰色文字 */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    z-index: 1; /* 确保文字位于前景 */
+  }
+
+  /* 鼠标悬浮时条形图和百分比效果 */
+  .progress-bar:hover .progress {
+    background-color: #0056b3; /* 更深的蓝色 */
+  } 
+
+  .progress-bar:hover .progress-percent {
+    color: #f0ad4e; /* 更深的灰色 */
+  }
+
+  /* 按钮样式 */
+  .resume-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .resume-button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  

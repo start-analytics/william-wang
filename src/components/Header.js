@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home"); // 跟踪当前活动的页面
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 60, // 调整滚动位置，避免被导航栏遮挡
+        behavior: "smooth",
+      });
+      setActiveSection(id); // 更新当前活动页面
+      setIsMenuOpen(false); // 自动关闭菜单
+    }
+  };
+
   return (
     <header className="header">
       <div className="avatar-container">
@@ -12,6 +31,38 @@ export default function Header() {
         />
         <h1 className="name">WILLIAM-WANG</h1>
       </div>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
+      <nav className={`nav-bar ${isMenuOpen ? "open" : ""}`}>
+        <ul className="nav-links">
+          <li
+            className={activeSection === "home" ? "active" : ""}
+            onClick={() => scrollToSection("home")}
+          >
+            Home
+          </li>
+          <li
+            className={activeSection === "services" ? "active" : ""}
+            onClick={() => scrollToSection("services")}
+          >
+            Services
+          </li>
+          <li
+            className={activeSection === "skills" ? "active" : ""}
+            onClick={() => scrollToSection("skills")}
+          >
+            Skills
+          </li>
+          <li
+            className={activeSection === "portfolio" ? "active" : ""}
+            onClick={() => scrollToSection("portfolio")}
+          >
+            Portfolio
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
+
