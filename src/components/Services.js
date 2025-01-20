@@ -4,37 +4,34 @@ import "./Services.css";
 export default function Services() {
   return (
     <section id="services" className="services-section">
-      <h2 className="section-title">Investment Services</h2>
-      <p className="section-subtitle">Empowering clients to achieve financial growth</p>
+      <h2 className="section-title">What I Do</h2>
+      <p className="section-subtitle">Empowering clients with actionable insights</p>
       <div className="services-container">
         <div className="service-card">
-          <div className="service-icon">📈</div> {/* 图标替换为与股票相关的图标 */}
-          <h3>Market Analysis</h3>
+          <div className="service-icon">📊</div> {/* 图标替换为与市场信号相关的图标 */}
+          <h3>Market Signals Hub</h3>
           <ul>
-            <li>Technical Analysis of Stocks</li>
-            <li>Identifying Market Trends</li>
-            <li>Price Movement Predictions</li>
-            <li>Volume Analysis</li>
+            <li>Free signals for: Stocks</li>
+            <li>Free signals for: Crypto</li>
+            <li>Free signals for: Forex</li>
           </ul>
         </div>
         <div className="service-card">
-          <div className="service-icon">💡</div> {/* 图标替换为与策略相关的图标 */}
-          <h3>Investment Strategies</h3>
+          <div className="service-icon">🎓</div> {/* 图标替换为与导师计划相关的图标 */}
+          <h3>Trading Mentorship</h3>
           <ul>
-            <li>Risk Management Plans</li>
-            <li>Portfolio Diversification</li>
-            <li>Value and Growth Investing</li>
-            <li>Sector and Thematic Investing</li>
+            <li>1 on 1 mentorship for Trading</li>
+            <li>Tailored guidance for success</li>
+            <li>Comprehensive trading strategies</li>
           </ul>
         </div>
         <div className="service-card">
-          <div className="service-icon">🏦</div> {/* 图标替换为财富管理相关的图标 */}
-          <h3>Wealth Management</h3>
+          <div className="service-icon">🌍</div> {/* 图标替换为与宏观经济洞察相关的图标 */}
+          <h3>Macroeconomic Insights</h3>
           <ul>
-            <li>Long-Term Financial Planning</li>
-            <li>Retirement Fund Allocation</li>
-            <li>Tax-Optimized Investments</li>
-            <li>Estate and Succession Planning</li>
+            <li>Perspective on macroeconomic news</li>
+            <li>Understanding global financial trends</li>
+            <li>Market reactions to key events</li>
           </ul>
         </div>
       </div>

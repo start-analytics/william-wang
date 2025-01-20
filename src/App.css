@@ -1,34 +1,72 @@
+:root {
+  /* 定义全局变量 */
+  --background-color: #000000;
+  --primary-color: #f39c12;
+  --secondary-color: #bbbbbb;
+  --text-color: #fff;
+  --hover-color: #f04e4ec9;
+  --card-background: #000000;
+}
+
+/* General body styling */
 body {
-  margin: 0;
+  background-color: var(--background-color); /* Black background */
+  color: #fff; /* White text */
+  font-family: Arial, sans-serif;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* Section Titles */
+.section-title {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.main-content {
-  flex: 1;
-  background-color: white;
-}
-
-.section {
-  padding: 80px 20px;
-  margin: 0 auto;
-  max-width: 1200px;
+/* Red Accents */
+.section-subtitle {
+  color: #ff0000; /* Bright red for emphasis */
+  font-size: 1.2rem;
   text-align: center;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.flex-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+button:hover {
+  background-color: var(--hover-color);
+  color: #ff0000;
+  border: 2px solid #ff0000;
+}
+
+/* Progress Bars */
+.progress-bar {
+  background-color: #fff;
+  height: 20px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  background-color: #ff0000;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.progress-percent {
+  position: absolute;
+  right: 10px;
+  color: #000;
+  font-weight: bold;
 }

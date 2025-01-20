@@ -1,7 +1,7 @@
 /* Portfolio 样式 */
 .portfolio-section {
   padding: 50px 20px;
-  background-color: #1e1e2f;
+  background-color: var(--background-color);
   color: #fff; /* 白色字体 */
   text-align: center;
 }
@@ -22,7 +22,7 @@
 .portfolio-item {
   width: 300px;
   padding: 20px;
-  background-color: #2a2a40; /* 与整体背景相匹配 */
+  background-color:var(--background-color); /* 与整体背景相匹配 */
   color: #fff;
   border: 1px solid #444; /* 与 Services 卡片边框一致 */
   border-radius: 8px;
