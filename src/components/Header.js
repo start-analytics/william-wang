@@ -58,7 +58,7 @@ export default function Header() {
             className={activeSection === "skills" ? "active" : ""}
             onClick={() => scrollToSection("skills")}
           >
-            Skills
+            Topics I discuss
           </li>
           
         </ul>
