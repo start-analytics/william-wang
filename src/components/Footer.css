@@ -1,5 +1,5 @@
 .footer {
-    background-color: #1e1e2f; /* 背景颜色 */
+    background-color:var(--background-color); /* 背景颜色 */
     text-align: center; /* 内容居中 */
     padding: 10px 20px; /* 内边距 */
     

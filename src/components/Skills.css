@@ -1,7 +1,7 @@
 /* 整体布局 */
 .skills-section {
     padding: 50px 20px;
-    background-color: #1e1e2f; /* 深色背景 */
+    background-color:var(--background-color); /* 深色背景 */
     color: #fff; /* 白色字体 */
     text-align: center;
   }
@@ -75,21 +75,4 @@
     color: #f0ad4e; /* 更深的灰色 */
   }
 
-  /* 按钮样式 */
-  .resume-button {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #e74c3c;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .resume-button:hover {
-    background-color: #e74c3c;
-    color: #fff;
-  }
   

@@ -43,10 +43,16 @@ export default function Header() {
             Home
           </li>
           <li
+            className={activeSection === "portfolio" ? "active" : ""}
+            onClick={() => scrollToSection("portfolio")}
+          >
+            Portfolio
+          </li>
+          <li
             className={activeSection === "services" ? "active" : ""}
             onClick={() => scrollToSection("services")}
           >
-            Services
+            What I do
           </li>
           <li
             className={activeSection === "skills" ? "active" : ""}
@@ -54,12 +60,7 @@ export default function Header() {
           >
             Skills
           </li>
-          <li
-            className={activeSection === "portfolio" ? "active" : ""}
-            onClick={() => scrollToSection("portfolio")}
-          >
-            Portfolio
-          </li>
+          
         </ul>
       </nav>
     </header>

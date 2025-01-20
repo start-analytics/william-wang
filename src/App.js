@@ -13,9 +13,10 @@ function App() {
       <Header />
       <main>
        <Home />
+       <Portfolio />
        <Services />
        <Skills />
-       <Portfolio />
+       
       </main>
       <Footer /> {/* 添加 Footer */}
     </div>
