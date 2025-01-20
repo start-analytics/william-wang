@@ -8,7 +8,11 @@
   padding: 10px 20px;
   background-color:var(--background-color); /* 深色背景 */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* 固定宽度 */
+  max-width: 100%; /* 防止超出屏幕 */
+  box-sizing: border-box; /* 内外边距不影响布局 */
 }
+
 
 .avatar-container {
   display: flex;
