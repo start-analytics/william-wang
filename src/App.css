@@ -25,7 +25,7 @@ body {
 
 /* Red Accents */
 .section-subtitle {
-  color: #ff0000; /* Bright red for emphasis */
+  color: #ffffff; 
   font-size: 1.2rem;
   text-align: center;
 }
@@ -58,7 +58,7 @@ button:hover {
 }
 
 .progress {
-  background-color: #ff0000;
+  background-color: #EE1C25;
   height: 100%;
   width: 0%;
   transition: width 0.5s ease;
@@ -67,6 +67,6 @@ button:hover {
 .progress-percent {
   position: absolute;
   right: 10px;
-  color: #000;
+  color: #ffffff;
   font-weight: bold;
 }

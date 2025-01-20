@@ -50,7 +50,7 @@
   
   .progress {
     height: 100%;
-    background-color: #007bff; /* 蓝色进度条 */
+    background-color: #EE1C25; /* 蓝色进度条 */
     border-radius: 5px 0 0 5px; /* 圆角 */
     transition: width 0.5s ease; /* 平滑动画 */
   }
@@ -66,13 +66,9 @@
     z-index: 1; /* 确保文字位于前景 */
   }
 
-  /* 鼠标悬浮时条形图和百分比效果 */
-  .progress-bar:hover .progress {
-    background-color: #0056b3; /* 更深的蓝色 */
-  } 
 
   .progress-bar:hover .progress-percent {
-    color: #f0ad4e; /* 更深的灰色 */
+    color: #ffffff; /* 更深的灰色 */
   }
 
   
