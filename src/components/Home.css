@@ -34,9 +34,25 @@
   }
   
   .home-content p {
-    font-size: 15px;
-    max-width: 600px;
-    line-height: 1.6;
-    margin: 0 auto;
+    font-size: 15px; /* 字体大小 */
+    max-width: 90%; /* 适配更窄的屏幕，保持相对宽度 */
+    line-height: 1.6; /* 行间距 */
+    margin: 0 auto; /* 水平居中 */
+    word-wrap: break-word; /* 防止长单词溢出 */
+  }
+  
+  /* 窄屏幕优化 */
+  @media (max-width: 768px) {
+    .home-content p {
+      font-size: 14px; /* 缩小字体大小 */
+      max-width: 80%; /* 更窄的文字宽度 */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-content p {
+      font-size: 13px; /* 手机屏幕上的更小字体 */
+      max-width: 70%; /* 保持视觉和谐 */
+    }
   }
   

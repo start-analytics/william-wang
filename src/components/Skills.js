@@ -10,7 +10,7 @@ export default function Skills() {
         <div className="skill-item">
           <p className="skill-name">Risk Management</p>
           <div className="progress-bar">
-            <div className="progress" style={{ width: "85%" }}></div>
+            <div className="progress" style={{ width: "99%" }}></div>
             <span className="progress-percent">85%</span>
           </div>
         </div>
