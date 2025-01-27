@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "./Portfolio.css";
 
+// 导入本地图片
+import project1 from "./assets/images/project1.jpg";
+import project2 from "./assets/images/project2.jpg";
+
+
 const portfolioItems = [
   {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3iYKSe_wy-0ypMjRU_UKnsSCCmWNN_KUJsA&s", // 替换为真实图片地址
+    src: project1, // 使用本地图片
     title: "Project 1",
-    description: "Description of project 1.",
+    description: `USDJPY - Higher timeframe bullish trend\nPrice is respecting the 4Hr Gap\nEntry: 155.776\nSL: 155.470\nTP1: 156.732\nTP2: 158.200\n0.47% risk of the account`, // 使用 \n 换行
   },
   {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3sBjg6NE2SKLca7EfVgGKLYv3EIjxRfPmSg&s",
+    src: project2, // 使用本地图片
     title: "Project 2",
-    description: "Description of project 2.",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTnVJZ1tdlZRpIrbMHqZgOuFku4bjKRSMTrVSF3VbzkXWMNnyk-TTzq3oSqTGY3Ck_vIo&usqp=CAU",
-    title: "Project 3",
-    description: "Description of project 3.",
+    description: "USDJPY - Higher time frame bullish trend\nRespecting 4HR gap\nEntry : 155.454\nSl: 154.718\nTP1: 156.742\nTP2: 158.1\nRisk 1.02%",
   },
 ];
 
@@ -40,8 +40,11 @@ export default function Portfolio() {
             className="portfolio-item"
             onClick={() => handleProjectClick(item)}
           >
+            <div className="portfolio-item-overlay">
+              <h3>{item.title}</h3>
+              <p>View Details</p>
+            </div>
             <img src={item.src} alt={item.title} />
-            <h3>{item.title}</h3>
           </div>
         ))}
       </div>
@@ -52,7 +55,7 @@ export default function Portfolio() {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img src={selectedProject.src} alt={selectedProject.title} />
             <h3>{selectedProject.title}</h3>
-            <p>{selectedProject.description}</p>
+            <p style={{ whiteSpace: "pre-line" }}>{selectedProject.description}</p>
             <button onClick={closeModal}>Close</button>
           </div>
         </div>
