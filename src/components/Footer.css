@@ -1,7 +1,19 @@
+:root {
+  --primary-accent: #007bff;       /* 主色调统一 */
+  --hover-accent: #0056b3;         /* 悬停色统一 */
+  --card-shadow: 0 4px 20px rgba(0,0,0,0.25); /* 更精致的阴影 */
+}
+
+/* 统一过渡动画 */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .footer {
+    border-top: 1px solid rgba(255,255,255,0.1); /* 分割线 */
     background-color:var(--background-color); /* 背景颜色 */
     text-align: center; /* 内容居中 */
-    padding: 10px 20px; /* 内边距 */
+    padding: 30px 20px; /* 内边距 */
     
   }
   
@@ -16,6 +28,9 @@
     display: inline-flex;
     align-items: center;
     color: #E1306C;
+    padding: 12px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
     text-decoration: none;
     font-size: 18px; /* 增加字体大小 */
     font-weight: 600;

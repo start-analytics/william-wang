@@ -1,3 +1,14 @@
+:root {
+  --primary-accent: #007bff;       /* 主色调统一 */
+  --hover-accent: #0056b3;         /* 悬停色统一 */
+  --card-shadow: 0 4px 20px rgba(0,0,0,0.25); /* 更精致的阴影 */
+}
+
+/* 统一过渡动画 */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* 整体布局 */
 .services-section {
     padding: 50px 20px;
@@ -31,6 +42,9 @@
   
   /* 服务卡片 */
   .service-card {
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
     flex: 1 1 300px; /* 每个卡片宽度为最小300px，最大平分空间 */
     max-width: 320px; /* 限制卡片的最大宽度 */
     min-height: 200px; /* 保持所有卡片高度一致 */
@@ -54,9 +68,10 @@
   
   /* 服务图标 */
   .service-icon {
-    font-size: 40px;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
   }
   
   /* 服务标题 */
@@ -88,5 +103,16 @@
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+  }
+
+  @media (max-width: 768px) {
+    .services-container {
+      grid-template-columns: 1fr; /* 移动端单列布局 */
+      gap: 15px;
+    }
+    
+    .service-card {
+      max-width: 100%;
+    }
   }
   

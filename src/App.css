@@ -13,6 +13,8 @@ body {
   background-color: var(--background-color); /* Black background */
   color: #fff; /* White text */
   font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /* 字体抗锯齿 */
+  text-rendering: optimizeLegibility;
 }
 
 /* Section Titles */
@@ -68,4 +70,21 @@ button:hover {
   right: 10px;
   color: #ffffff;
   font-weight: bold;
+}
+
+/* 全局添加 */
+@media (max-width: 768px) {
+  .portfolio-grid,
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .header {
+    padding: 10px 15px;
+  }
+}
+
+.portfolio-item img,
+.modal-content img {
+  will-change: transform; /* GPU加速 */
 }

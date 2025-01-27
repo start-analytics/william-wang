@@ -1,3 +1,14 @@
+:root {
+  --primary-accent: #007bff;       /* 主色调统一 */
+  --hover-accent: #0056b3;         /* 悬停色统一 */
+  --card-shadow: 0 4px 20px rgba(0,0,0,0.25); /* 更精致的阴影 */
+}
+
+/* 统一过渡动画 */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* 整体布局 */
 .skills-section {
     padding: 50px 20px;
@@ -41,18 +52,20 @@
   .progress-bar {
     position: relative;
     overflow: visible; /* 确保子元素不会被隐藏 */
-    height: 10px;
+    height: 12px;
     width: 100%;
     background-color: #e0e0e0;
     border-radius: 5px;
     margin-top: 10px;
+    background: rgba(255,255,255,0.1);
   }
   
   .progress {
     height: 100%;
-    background-color: #EE1C25; /* 蓝色进度条 */
+    background-color: #EE1C25; 
     border-radius: 5px 0 0 5px; /* 圆角 */
     transition: width 0.5s ease; /* 平滑动画 */
+    box-shadow: inset 2px 0 4px rgba(0,0,0,0.2); /* 立体感 */
   }
   
   .progress-percent {
@@ -69,6 +82,17 @@
 
   .progress-bar:hover .progress-percent {
     color: #ffffff; /* 更深的灰色 */
+  }
+
+  @media (max-width: 480px) {
+    .skill-name {
+      font-size: 16px;
+    }
+    
+    .progress-percent {
+      font-size: 10px;
+      top: -18px;
+    }
   }
 
   
