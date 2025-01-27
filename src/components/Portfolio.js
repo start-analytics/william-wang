@@ -9,12 +9,12 @@ import project2 from "./assets/images/project2.jpg";
 const portfolioItems = [
   {
     src: project1, // 使用本地图片
-    title: "Project 1",
+    title: "2025/1/27",
     description: `USDJPY - Higher timeframe bullish trend\nPrice is respecting the 4Hr Gap\nEntry: 155.776\nSL: 155.470\nTP1: 156.732\nTP2: 158.200\n0.47% risk of the account`, // 使用 \n 换行
   },
   {
     src: project2, // 使用本地图片
-    title: "Project 2",
+    title: "2025/1/27",
     description: "USDJPY - Higher time frame bullish trend\nRespecting 4HR gap\nEntry : 155.454\nSl: 154.718\nTP1: 156.742\nTP2: 158.1\nRisk 1.02%",
   },
 ];
