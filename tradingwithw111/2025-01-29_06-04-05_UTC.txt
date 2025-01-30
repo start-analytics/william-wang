@@ -1,0 +1,9 @@
+ETH USD DAILY BODY CLOSE below 3130
+Daily bias is bearish 
+Entry 3125 
+Sl 3255
+TP 1 2913
+TP2 2300
+TP3 2100
+
+Risking 0.52%

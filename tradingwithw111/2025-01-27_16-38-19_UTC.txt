@@ -1,0 +1,7 @@
+Us30- displaced under the grey Zone, currently in a retest phase.
+Price has a delay price action relative to nasdaq 
+Entry 44348
+Sl 44582
+TP 1 43824
+TP 2 43052
+Risking 0.82%
