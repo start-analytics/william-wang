@@ -1,9 +1,9 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Portfolio from "@/components/Portfolio";
-import Home from "@/components/Home";
-import Skills from "@/components/Skills";
-import Services from "@/components/Services";
+import Footer from "@/components/Footer/footer";
+import Header from "@/components/Header/header";
+import Portfolio from "@/components/Portfolio/portfolio";
+import Home from "@/components/Home/home";
+import Skills from "@/components/Skills/skills";
+import Services from "@/components/Services/services";
 export default function Page() {
 	return (
 		<>

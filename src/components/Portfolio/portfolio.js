@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "./Portfolio.css";
+import "./portfolio.css";
 
 export default function Portfolio() {
 	const [portfolioItems, setPortfolioItems] = useState([]);
