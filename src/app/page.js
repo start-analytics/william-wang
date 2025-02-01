@@ -4,6 +4,7 @@ import Portfolio from "@/components/Portfolio/portfolio";
 import Home from "@/components/Home/home";
 import Skills from "@/components/Skills/skills";
 import Services from "@/components/Services/services";
+
 export default function Page() {
 	return (
 		<>
