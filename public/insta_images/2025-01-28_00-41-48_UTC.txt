@@ -1,8 +1,0 @@
-Ran recent liquidity, 1hr higher high and higher low , price in discount within the larger timeframe consolidation 
-
-Entry 87.917
-SL 87.519
-TP 1 87.8
-TP2 89.270
-TP 3 89.700
-Risking 0.9%

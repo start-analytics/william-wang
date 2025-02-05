@@ -1,7 +1,7 @@
 :root {
-  --primary-accent: #007bff;       /* 主色调统一 */
-  --hover-accent: #0056b3;         /* 悬停色统一 */
-  --card-shadow: 0 4px 20px rgba(0,0,0,0.25); /* 更精致的阴影 */
+  --primary-accent: #007bff;       /* 统一主色调 */
+  --hover-accent: #0056b3;         /* 统一悬停色 */
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* 统一阴影 */
 }
 
 /* 统一过渡动画 */
@@ -12,7 +12,7 @@
 /* Portfolio 样式 */
 .portfolio-section {
   padding: 80px 20px;
-  background-color: var(--background-color); /* 保留原有背景颜色 */
+  background-color: var(--background-color);
   color: #fff;
   text-align: center;
 }
@@ -21,27 +21,39 @@
   font-size: 36px;
   margin-bottom: 40px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700; /* 加粗标题 */
-  letter-spacing: 1.5px; /* 增加字母间距 */
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* 让帖子横向排列 */
+.portfolio-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
 }
 
+/* 隐藏滚动条 */
+.portfolio-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* 让每个帖子大小一致 */
 .portfolio-item {
-  aspect-ratio: 4/3; /* 固定图片比例 */
-  width: 100%;
-  max-width: 300px;
-  position: relative;
-  overflow: hidden;
+  flex: 0 0 300px;
+  scroll-snap-align: start;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-shadow);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
 }
 
 .portfolio-item:hover {
@@ -76,14 +88,38 @@
   opacity: 1;
 }
 
-.portfolio-item-overlay h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+/* 让左右滑动按钮固定在两侧 */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  border-radius: 50%;
 }
 
-.portfolio-item-overlay p {
-  font-size: 16px;
-  font-style: italic;
+.scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-left {
+  left: 10px;
+}
+
+.scroll-right {
+  right: 10px;
+}
+
+/* 在移动端隐藏滚动按钮 */
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none;
+  }
 }
 
 /* 模态框样式 */
@@ -93,12 +129,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(10, 10, 10, 0.85); /* 深色半透明背景 */
+  backdrop-filter: blur(8px); /* 增加模糊度，提升层次感 */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -111,71 +149,138 @@
 }
 
 .modal-content {
-  background: linear-gradient(145deg, #2a2a40 0%, #1e1e2f 100%); /* 渐变背景 */
-  border: 1px solid rgba(255,255,255,0.1); /* 精致边框 */
-  background: #2a2a40;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 90%;
-  max-height: 90vh;
-  width: 500px;
-  overflow: auto;
-  text-align: center;
   position: relative;
-  animation: slideIn 0.3s ease-in-out;
+  width: 90vw;
+  max-width: 800px;
+  height: 800px;
+  background: linear-gradient(145deg, #1c1c1c, #252525);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(255, 0, 0, 0.4);
+  text-align: center;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
-.modal-content img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
+/* 让标题和描述更有质感 */
 .modal-content h3 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .modal-content p {
   font-size: 16px;
-  margin-bottom: 20px;
-  white-space: pre-line;
-  line-height: 1.6;
+  line-height: 1.5;
+  opacity: 0.8;
 }
 
-.modal-content button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+.modal-content img {
+  max-width: 100%;
+  max-height: 50vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* 确保关闭按钮始终可见 */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50%;
+  z-index: 2000;  /* ✅ 让关闭按钮始终在最上层 */
+  transition: all 0.3s ease-in-out;
 }
 
-.modal-content button:hover {
-  background-color: #0056b3;
+.close-btn:hover {
+  background: red;
+  color: black;
 }
 
-@media (max-width: 480px) {
-  .modal-content {
-    padding: 20px 15px;
-    width: 95%;
+/* 图片轮播容器 */
+.image-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* 图片轮播 */
+.image-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-slider img {
+  flex: 0 0 100%;
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* 左右切换按钮样式（黑红风格） */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  border: 2px solid red;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+
+}
+
+/* 悬停时变为红色背景 */
+.prev-btn:hover, .next-btn:hover {
+  background: red;
+  color: black; /* 文字颜色反转 */
+  border-color: black;
+}
+
+/* 按钮的位置（照片两侧） */
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* 在移动端隐藏按钮 */
+@media (max-width: 768px) {
+  .prev-btn, .next-btn {
+    display: none;
   }
-  
-  .modal-content p {
-    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    align-items: flex-start; /* ✅ 确保模态框内容可以向上滚动 */
+  }
+  .modal-content {
+    height: 90vh; /* 让模态框更大，适应屏幕 */
+    max-height: 90vh;
+    overflow-y: auto; /* ✅ 确保模态框可以滚动 */
   }
 }
