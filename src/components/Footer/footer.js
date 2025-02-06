@@ -7,7 +7,7 @@ export default function Footer() {
 		<footer className="footer">
 			<p>Follow me:</p>
 			<a
-				href="https://instagram.com/w1111amwang" // 替换为你的 Instagram 链接
+				href="https://instagram.com/tradingwithw111" // 替换为你的 Instagram 链接
 				target="_blank"
 				rel="noopener noreferrer"
 				className="footer-link"

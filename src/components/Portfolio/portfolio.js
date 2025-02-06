@@ -17,6 +17,20 @@ export default function Portfolio() {
             .catch((error) => console.error("Error fetching portfolio data:", error));
     }, []);
 
+    // 向左滚动帖子
+    const scrollLeft = () => {
+        if (portfolioGridRef.current) {
+            portfolioGridRef.current.scrollBy({ left: -300, behavior: "smooth" });
+        }
+    };
+
+    // 向右滚动帖子
+    const scrollRight = () => {
+        if (portfolioGridRef.current) {
+            portfolioGridRef.current.scrollBy({ left: 300, behavior: "smooth" });
+        }
+    };
+    
     const handleProjectClick = (project) => {
         setSelectedProject(project);
         setCurrentImageIndex(0); // 选中帖子后，重置图片索引
