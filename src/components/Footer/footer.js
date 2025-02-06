@@ -13,7 +13,7 @@ export default function Footer() {
 				className="footer-link"
 			>
 				<FontAwesomeIcon icon={faInstagram} size="2x" className="icon" />
-				<span className="w1111amwang">@w1111amwang</span> {/* 添加用户名 */}
+				<span className="tradingwithw111">@tradingwithw111</span> {/* 添加用户名 */}
 			</a>
 		</footer>
 	);
